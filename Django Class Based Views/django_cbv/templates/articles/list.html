@@ -1,0 +1,28 @@
+<a href="{% url 'create article' %}">Create</a>
+
+<form action="{% url 'list articles cbv' %}?page={{ page_obj.number }}">
+    <input name="search" value="{{ search }}">
+    <button>Search by title</button>
+</form>
+
+<ul>
+    {% for article in object_list %} {# article_list #}
+        {# 'name of the model'_list #}
+        <li>
+            <a href="{% url 'details article' article.pk %}">{{ article.pk }}. {{ article.title }}</a>
+        <a href="{% url 'delete article' article.pk %}">Delete</a>
+        </li>
+    {% endfor %}
+</ul>
+
+{% if page_obj.has_previous %}
+    <a href="?page={{ page_obj.previous_page_number }}&search={{ search }}">&lt;</a>
+{% else %}
+    <a>&lt</a>
+{% endif %}
+{{ page_obj.number }} / {{ paginator.num_pages }}
+{% if page_obj.has_next %}
+    <a href="?page={{ page_obj.next_page_number }}&search={{ search }}">&gt;</a>
+{% else %}
+    <a>&gt</a>
+{% endif %}
