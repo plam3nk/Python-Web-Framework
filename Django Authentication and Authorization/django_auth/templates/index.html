@@ -1,0 +1,18 @@
+<a href="{% url 'login' %}">Login</a>
+<a href="{% url 'logout' %}">Logout</a>
+
+<h1>It works</h1>
+<div>
+    <div>
+        User: {{ user }}
+    </div>
+    <div>
+        Is authenticated: {{ user.is_authenticated }}
+    </div>
+    <div>
+        Permission: {{ permission }}
+    </div>
+    <div>
+        Specific User: {{ specific_user }}
+    </div>
+</div>
