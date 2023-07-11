@@ -1,19 +1,16 @@
 from django.shortcuts import render
+from django.templatetags.static import static
 from django.urls import reverse_lazy
 from django.views import generic as views
 from django.contrib.auth import views as auth_views, get_user_model, login
 from django.contrib.auth import forms as auth_form
 
+from petstagram.accounts.forms import RegisterUserForm
+
 # Create your views here.
 
 # register_user, login_user, show_profile_details, edit_profile, delete_profile
 UserModel = get_user_model()
-
-
-class RegisterUserForm(auth_form.UserCreationForm):
-    class Meta:
-        model = UserModel
-        fields = ('username', 'email', 'password1', 'password2')
 
 
 class RegisterUserView(views.CreateView):
@@ -50,21 +47,41 @@ class LogoutUserView(auth_views.LogoutView):
     pass
 
 
-def register_user(request):
-    return render(request, template_name='accounts/register-page.html')
+class ProfileDetailsView(views.DetailView):
+    template_name = 'accounts/profile-details-page.html'
+    model = UserModel
+
+    profile_image = static('images/person.png')
+
+    def get_profile_image(self):
+        if self.object.profile_picture is not None:
+            return self.object.profile_picture
+        return self.profile_image
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        context['profile_image'] = self.get_profile_image()
+        context['pets'] = self.request.user.pet_set.all()
+
+        return context
+
+    # 'UserModel.objects.all()' returns 'queryset'
+    # To work provide 'model', 'queryset' or 'get_queryset'
 
 
-def login_user(request):
-    return render(request, template_name='accounts/login-page.html')
+# def show_profile_details(request, pk):
+#     pets = Pet.objects.all()
+#
+#     context = {
+#         'pets': pets,
+#     }
+#
+#     return render(request, template_name='accounts/profile-details-page.html')
+
+class ProfileEditView(views.UpdateView):
+    template_name = 'accounts/profile-edit-page.html'
 
 
-def show_profile_details(request, pk):
-    return render(request, template_name='accounts/profile-details-page.html')
-
-
-def edit_profile(request, pk):
-    return render(request, template_name='accounts/profile-edit-page.html')
-
-
-def delete_profile(request, pk):
-    return render(request, template_name='accounts/profile-delete-page.html')
+class ProfileDeleteView(views.DeleteView):
+    template_name = 'accounts/profile-delete-page.html'

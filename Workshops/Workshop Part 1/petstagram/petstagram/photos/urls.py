@@ -1,10 +1,10 @@
 from django.urls import include, path
 
-from .views import photo_add, photo_details, photo_edit, photo_delete
+from .views import PhotoAddView, photo_details, photo_edit, photo_delete
 
 urlpatterns = [
     # photos/
-    path('add/', photo_add, name='photo-add'),
+    path('add/', PhotoAddView.as_view(), name='photo-add'),
     path('<int:pk>/', include([
         path('', photo_details, name='photo-details'),
         path('edit/', photo_edit, name='photo-edit'),

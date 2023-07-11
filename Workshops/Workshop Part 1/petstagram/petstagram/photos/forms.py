@@ -13,7 +13,9 @@ class PhotoBaseForm(forms.ModelForm):
 
 
 class PhotoCreateForm(PhotoBaseForm):
-    pass
+    class Meta:
+        model = Photo
+        fields = ['photo', 'description', 'location', 'tagged_pets']
 
 
 class PhotoEditForm(PhotoBaseForm):
@@ -40,4 +42,3 @@ class PhotoDeleteForm(DisabledFormMixin, PhotoBaseForm):
             self.instance.delete()
 
         return self.instance
-

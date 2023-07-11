@@ -68,3 +68,9 @@ class PetstagramUser(auth_models.AbstractUser):
         null=True,
         blank=True,
     )
+
+    @property
+    def full_name(self):
+        if self.first_name or self.last_name:
+            return f'{self.first_name} {self.last_name}'
+        return None

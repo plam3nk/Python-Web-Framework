@@ -5,6 +5,7 @@ from django.urls import reverse
 from petstagram.common.utils import get_user_liked_photos
 from petstagram.photos.forms import PhotoCreateForm, PhotoEditForm, PhotoDeleteForm
 from petstagram.photos.models import Photo
+from django.views import generic as views
 
 
 # Create your views here.
@@ -44,6 +45,23 @@ def get_post_photo_form(request, form, success_url, template_path, pk=None):
         template_path,
         context
     )
+
+
+class PhotoAddView(views.CreateView):
+    template_name = 'photos/photo-add-page.html'
+    form_class = PhotoCreateForm
+
+    def get_success_url(self):
+        return reverse('photo-details', kwargs={
+            'pk': self.object.pk
+        })
+
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        self.object.user = self.request.user
+        self.object.save()
+
+        return super().form_valid(form)
 
 
 @login_required

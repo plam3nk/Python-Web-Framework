@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect, resolve_url
 from django.urls import reverse
 from pyperclip import copy
 
-from petstagram.common.forms import PhotoCommentForm
+from petstagram.common.forms import PhotoCommentForm, SearchForm
 from petstagram.common.models import PhotoLike
 from petstagram.common.utils import get_user_liked_photos, get_photo_url
 from petstagram.photos.models import Photo
@@ -24,12 +24,22 @@ def apply_user_liked_photo(photo):
 
 
 def index(request):
-    photos = [apply_likes_count(photo) for photo in Photo.objects.all()]
-    photos = [apply_user_liked_photo(photo) for photo in photos]
+    photos = Photo.objects.all()
+    search_form = SearchForm(request.GET)
+
+    if search_form.is_valid():
+        search_text = search_form.cleaned_data['search_text']
+        photos = photos.filter(tagged_pets__name__icontains=search_text)
+
+    for photo in photos:
+        photo.liked_by_user = photo.photolike_set\
+            .filter(user=request.user)\
+            .exists()
 
     context = {
         'photos': photos,
         'comment_form': PhotoCommentForm(),
+        'search_form': search_form,
     }
     return render(
         request,
@@ -40,19 +50,19 @@ def index(request):
 
 @login_required
 def like_photo(request, photo_id):
-    user_liked_photos = get_user_liked_photos(photo_id)
-    if user_liked_photos:
-        user_liked_photos.delete()
+    photo = Photo.objects.get(pk=photo_id)
+    like_object = PhotoLike.objects \
+        .filter(photo=photo, user=request.user) \
+        .first()
+
+    if like_object:
+        like_object.delete()
+
     else:
-        # Method 2
-        PhotoLike.objects.create(
-            photo_id=photo_id,
-        )
+        new_like_object = PhotoLike(photo=photo, user=request.user)
+        new_like_object.save()
 
-        return redirect(get_photo_url(request, photo_id))
-
-    return redirect('index')
-
+    return redirect(request.META['HTTP_REFERER'] + f"#{photo_id}")
     # Method 1
     # photo_like = PhotoLike(
     #     photo_id=photo_id,

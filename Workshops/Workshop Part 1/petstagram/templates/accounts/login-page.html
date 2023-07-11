@@ -10,7 +10,7 @@
 
             <!-- Start Login Form-->
             <form action="{% url 'login' %}" method="post">
-                {{ form.username|placeholder:'Enter username' }}
+                {{ form.username|placeholder:'Enter username'|form_field_class:'form-username' }}
                 {{ form.password|placeholder:'Enter password' }}
                 <input type="hidden" value="{{ next }}" name="next"/>
                 {% csrf_token %}

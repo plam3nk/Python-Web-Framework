@@ -33,7 +33,10 @@ def pet_add(request):
         # request.method == 'post'
         form = PetCreateForm(request.POST)
         if form.is_valid():
-            form.save()
+            pet = form.save(commit=False)
+            pet.user = request.user
+            pet.save()
+
             return redirect('profile-details', pk=1)  # TODO: fix when auth.
 
     context = {

@@ -44,7 +44,7 @@
                 <!-- Start Like Button -->
                 <span class="heart">
 									<a href="{% url 'like-photo' photo_id=photo.pk %}">
-										{% if photo.is_liked_by_user %}
+										{% if photo.liked_by_user %}
                                             <svg style="color: red"
                                                  xmlns="http://www.w3.org/2000/svg"
                                                  width="24"
@@ -108,7 +108,7 @@
         <!-- End Like and Share Buttons -->
 
         <!-- Number of Likes per Photo -->
-        <p class="likes">{{ photo.likes_count }} likes</p>
+        <p class="likes">{{ photo.photolike_set.count}} likes</p>
 
 
         <!-- Start Tagged Pets -->
