@@ -10,7 +10,6 @@ from django.views import generic as views
 
 # Create your views here.
 
-# photo_add, photo_details, photo_edit
 @login_required
 def photo_details(request, pk):
     photo = Photo.objects.filter(pk=pk) \
