@@ -1,5 +1,4 @@
 from django import forms
-from django.core.exceptions import ValidationError
 
 from petstagram.common.models import PhotoLike, PhotoComment
 from petstagram.core.forms_mixins import DisabledFormMixin
