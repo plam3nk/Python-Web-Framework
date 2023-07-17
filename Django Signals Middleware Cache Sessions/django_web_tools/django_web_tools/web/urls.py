@@ -7,3 +7,5 @@ urlpatterns = [
     path('create/', create_task, name='create task'),
     path('details_task/<int:pk>', details_task, name='details task')
 ]
+
+# from .signals import *

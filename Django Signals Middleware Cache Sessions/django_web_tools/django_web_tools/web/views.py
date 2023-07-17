@@ -3,6 +3,7 @@ import random
 from django.contrib.auth import get_user_model
 from django.shortcuts import render, redirect
 from django.core.cache import cache
+from django.views import generic as views
 
 from django_web_tools.web.models import Task
 
@@ -41,8 +42,10 @@ def create_task(request):
 
 
 def details_task(request, pk):
+    # pre_save
     task = Task.objects.filter(pk=pk) \
         .get()
+    # post_save
 
     prev_tasks = request.session.get('prev_tasks', [])
 
@@ -54,3 +57,4 @@ def details_task(request, pk):
     request.session['prev_tasks'] = prev_tasks[start_index:]
     print(request.session['prev_tasks'])
     return redirect('index')
+
