@@ -1,7 +1,9 @@
 from django.urls import path
 
-from django_web_tools.web.views import index
+from django_web_tools.web.views import index, create_task, details_task
 
 urlpatterns = [
-    path('', index, name='index')
+    path('', index, name='index'),
+    path('create/', create_task, name='create task'),
+    path('details_task/<int:pk>', details_task, name='details task')
 ]
