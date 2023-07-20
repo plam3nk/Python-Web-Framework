@@ -1,0 +1,164 @@
+2023/07/20 12:39:10 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/conf.d/web.conf:24
+2023/07/20 12:40:43 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/conf.d/web.conf:24
+2023/07/20 12:42:08 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/conf.d/web.conf:24
+2023/07/20 12:43:42 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/conf.d/web.conf:24
+2023/07/20 12:44:16 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/conf.d/web.conf:24
+2023/07/20 12:48:06 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/conf.d/web.conf:24
+2023/07/20 12:54:19 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/conf.d/web.conf:24
+2023/07/20 12:55:38 [notice] 1#1: using the "epoll" event method
+2023/07/20 12:55:38 [notice] 1#1: nginx/1.25.1
+2023/07/20 12:55:38 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2023/07/20 12:55:38 [notice] 1#1: OS: Linux 5.15.90.1-microsoft-standard-WSL2
+2023/07/20 12:55:38 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/07/20 12:55:38 [notice] 1#1: start worker processes
+2023/07/20 12:55:38 [notice] 1#1: start worker process 21
+2023/07/20 12:55:38 [notice] 1#1: start worker process 22
+2023/07/20 12:55:38 [notice] 1#1: start worker process 23
+2023/07/20 12:55:38 [notice] 1#1: start worker process 24
+2023/07/20 12:58:23 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2023/07/20 12:58:23 [notice] 21#21: gracefully shutting down
+2023/07/20 12:58:23 [notice] 23#23: gracefully shutting down
+2023/07/20 12:58:23 [notice] 22#22: gracefully shutting down
+2023/07/20 12:58:23 [notice] 22#22: exiting
+2023/07/20 12:58:23 [notice] 24#24: gracefully shutting down
+2023/07/20 12:58:23 [notice] 21#21: exiting
+2023/07/20 12:58:23 [notice] 23#23: exiting
+2023/07/20 12:58:23 [notice] 22#22: exit
+2023/07/20 12:58:23 [notice] 24#24: exiting
+2023/07/20 12:58:23 [notice] 21#21: exit
+2023/07/20 12:58:23 [notice] 23#23: exit
+2023/07/20 12:58:23 [notice] 24#24: exit
+2023/07/20 12:58:24 [notice] 1#1: signal 17 (SIGCHLD) received from 24
+2023/07/20 12:58:24 [notice] 1#1: worker process 21 exited with code 0
+2023/07/20 12:58:24 [notice] 1#1: worker process 24 exited with code 0
+2023/07/20 12:58:24 [notice] 1#1: signal 29 (SIGIO) received
+2023/07/20 12:58:24 [notice] 1#1: signal 17 (SIGCHLD) received from 22
+2023/07/20 12:58:24 [notice] 1#1: worker process 22 exited with code 0
+2023/07/20 12:58:24 [notice] 1#1: worker process 23 exited with code 0
+2023/07/20 12:58:24 [notice] 1#1: exit
+2023/07/20 12:58:42 [notice] 1#1: using the "epoll" event method
+2023/07/20 12:58:42 [notice] 1#1: nginx/1.25.1
+2023/07/20 12:58:42 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2023/07/20 12:58:42 [notice] 1#1: OS: Linux 5.15.90.1-microsoft-standard-WSL2
+2023/07/20 12:58:42 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/07/20 12:58:42 [notice] 1#1: start worker processes
+2023/07/20 12:58:42 [notice] 1#1: start worker process 20
+2023/07/20 12:58:42 [notice] 1#1: start worker process 21
+2023/07/20 12:58:42 [notice] 1#1: start worker process 22
+2023/07/20 12:58:42 [notice] 1#1: start worker process 23
+2023/07/20 13:01:48 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2023/07/20 13:01:48 [notice] 20#20: gracefully shutting down
+2023/07/20 13:01:48 [notice] 22#22: gracefully shutting down
+2023/07/20 13:01:48 [notice] 21#21: gracefully shutting down
+2023/07/20 13:01:48 [notice] 23#23: gracefully shutting down
+2023/07/20 13:01:48 [notice] 20#20: exiting
+2023/07/20 13:01:48 [notice] 22#22: exiting
+2023/07/20 13:01:48 [notice] 21#21: exiting
+2023/07/20 13:01:48 [notice] 23#23: exiting
+2023/07/20 13:01:48 [notice] 22#22: exit
+2023/07/20 13:01:48 [notice] 21#21: exit
+2023/07/20 13:01:48 [notice] 20#20: exit
+2023/07/20 13:01:48 [notice] 23#23: exit
+2023/07/20 13:01:48 [notice] 1#1: signal 17 (SIGCHLD) received from 23
+2023/07/20 13:01:48 [notice] 1#1: worker process 22 exited with code 0
+2023/07/20 13:01:48 [notice] 1#1: worker process 23 exited with code 0
+2023/07/20 13:01:48 [notice] 1#1: signal 29 (SIGIO) received
+2023/07/20 13:01:48 [notice] 1#1: signal 17 (SIGCHLD) received from 22
+2023/07/20 13:01:48 [notice] 1#1: signal 17 (SIGCHLD) received from 20
+2023/07/20 13:01:48 [notice] 1#1: worker process 20 exited with code 0
+2023/07/20 13:01:48 [notice] 1#1: signal 29 (SIGIO) received
+2023/07/20 13:01:48 [notice] 1#1: signal 17 (SIGCHLD) received from 21
+2023/07/20 13:01:48 [notice] 1#1: worker process 21 exited with code 0
+2023/07/20 13:01:48 [notice] 1#1: exit
+2023/07/20 13:02:05 [notice] 1#1: using the "epoll" event method
+2023/07/20 13:02:05 [notice] 1#1: nginx/1.25.1
+2023/07/20 13:02:05 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2023/07/20 13:02:05 [notice] 1#1: OS: Linux 5.15.90.1-microsoft-standard-WSL2
+2023/07/20 13:02:05 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/07/20 13:02:05 [notice] 1#1: start worker processes
+2023/07/20 13:02:05 [notice] 1#1: start worker process 20
+2023/07/20 13:02:05 [notice] 1#1: start worker process 21
+2023/07/20 13:02:05 [notice] 1#1: start worker process 22
+2023/07/20 13:02:05 [notice] 1#1: start worker process 23
+2023/07/20 13:06:13 [error] 20#20: *9 open() "/home/app/web/staticfiles/admin/css/base.css" failed (2: No such file or directory), client: 172.19.0.1, server: django-deploy-demo.com, request: "GET /static/admin/css/base.css HTTP/1.1", host: "django-deploy-demo.com:81", referrer: "http://django-deploy-demo.com:81/admin/login/?next=/admin/"
+2023/07/20 13:06:13 [error] 22#22: *15 open() "/home/app/web/staticfiles/admin/css/nav_sidebar.css" failed (2: No such file or directory), client: 172.19.0.1, server: django-deploy-demo.com, request: "GET /static/admin/css/nav_sidebar.css HTTP/1.1", host: "django-deploy-demo.com:81", referrer: "http://django-deploy-demo.com:81/admin/login/?next=/admin/"
+2023/07/20 13:06:13 [error] 23#23: *16 open() "/home/app/web/staticfiles/admin/css/login.css" failed (2: No such file or directory), client: 172.19.0.1, server: django-deploy-demo.com, request: "GET /static/admin/css/login.css HTTP/1.1", host: "django-deploy-demo.com:81", referrer: "http://django-deploy-demo.com:81/admin/login/?next=/admin/"
+2023/07/20 13:06:13 [error] 21#21: *11 open() "/home/app/web/staticfiles/admin/css/dark_mode.css" failed (2: No such file or directory), client: 172.19.0.1, server: django-deploy-demo.com, request: "GET /static/admin/css/dark_mode.css HTTP/1.1", host: "django-deploy-demo.com:81", referrer: "http://django-deploy-demo.com:81/admin/login/?next=/admin/"
+2023/07/20 13:06:13 [error] 20#20: *17 open() "/home/app/web/staticfiles/admin/css/responsive.css" failed (2: No such file or directory), client: 172.19.0.1, server: django-deploy-demo.com, request: "GET /static/admin/css/responsive.css HTTP/1.1", host: "django-deploy-demo.com:81", referrer: "http://django-deploy-demo.com:81/admin/login/?next=/admin/"
+2023/07/20 13:06:13 [error] 20#20: *18 open() "/home/app/web/staticfiles/admin/js/theme.js" failed (2: No such file or directory), client: 172.19.0.1, server: django-deploy-demo.com, request: "GET /static/admin/js/theme.js HTTP/1.1", host: "django-deploy-demo.com:81", referrer: "http://django-deploy-demo.com:81/admin/login/?next=/admin/"
+2023/07/20 13:06:13 [error] 20#20: *9 open() "/home/app/web/staticfiles/admin/js/nav_sidebar.js" failed (2: No such file or directory), client: 172.19.0.1, server: django-deploy-demo.com, request: "GET /static/admin/js/nav_sidebar.js HTTP/1.1", host: "django-deploy-demo.com:81", referrer: "http://django-deploy-demo.com:81/admin/login/?next=/admin/"
+2023/07/20 13:08:36 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2023/07/20 13:08:36 [notice] 20#20: gracefully shutting down
+2023/07/20 13:08:36 [notice] 20#20: exiting
+2023/07/20 13:08:36 [notice] 22#22: gracefully shutting down
+2023/07/20 13:08:36 [notice] 21#21: gracefully shutting down
+2023/07/20 13:08:36 [notice] 23#23: gracefully shutting down
+2023/07/20 13:08:36 [notice] 20#20: exit
+2023/07/20 13:08:36 [notice] 22#22: exiting
+2023/07/20 13:08:36 [notice] 21#21: exiting
+2023/07/20 13:08:36 [notice] 23#23: exiting
+2023/07/20 13:08:36 [notice] 22#22: exit
+2023/07/20 13:08:36 [notice] 21#21: exit
+2023/07/20 13:08:36 [notice] 23#23: exit
+2023/07/20 13:08:36 [notice] 1#1: signal 17 (SIGCHLD) received from 21
+2023/07/20 13:08:36 [notice] 1#1: worker process 21 exited with code 0
+2023/07/20 13:08:36 [notice] 1#1: signal 29 (SIGIO) received
+2023/07/20 13:08:36 [notice] 1#1: signal 17 (SIGCHLD) received from 23
+2023/07/20 13:08:36 [notice] 1#1: worker process 20 exited with code 0
+2023/07/20 13:08:36 [notice] 1#1: worker process 22 exited with code 0
+2023/07/20 13:08:36 [notice] 1#1: worker process 23 exited with code 0
+2023/07/20 13:08:36 [notice] 1#1: exit
+2023/07/20 13:08:59 [notice] 1#1: using the "epoll" event method
+2023/07/20 13:08:59 [notice] 1#1: nginx/1.25.1
+2023/07/20 13:08:59 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2023/07/20 13:08:59 [notice] 1#1: OS: Linux 5.15.90.1-microsoft-standard-WSL2
+2023/07/20 13:08:59 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/07/20 13:08:59 [notice] 1#1: start worker processes
+2023/07/20 13:08:59 [notice] 1#1: start worker process 20
+2023/07/20 13:08:59 [notice] 1#1: start worker process 21
+2023/07/20 13:08:59 [notice] 1#1: start worker process 22
+2023/07/20 13:08:59 [notice] 1#1: start worker process 23
+2023/07/20 13:09:26 [error] 23#23: *5 open() "/home/app/web/staticfiles/admin/css/base.css" failed (2: No such file or directory), client: 172.19.0.1, server: django-deploy-demo.com, request: "GET /static/admin/css/base.css HTTP/1.1", host: "django-deploy-demo.com:81", referrer: "http://django-deploy-demo.com:81/admin/login/?next=/admin/"
+2023/07/20 13:09:26 [error] 22#22: *4 open() "/home/app/web/staticfiles/admin/css/dark_mode.css" failed (2: No such file or directory), client: 172.19.0.1, server: django-deploy-demo.com, request: "GET /static/admin/css/dark_mode.css HTTP/1.1", host: "django-deploy-demo.com:81", referrer: "http://django-deploy-demo.com:81/admin/login/?next=/admin/"
+2023/07/20 13:09:26 [error] 21#21: *8 open() "/home/app/web/staticfiles/admin/css/nav_sidebar.css" failed (2: No such file or directory), client: 172.19.0.1, server: django-deploy-demo.com, request: "GET /static/admin/css/nav_sidebar.css HTTP/1.1", host: "django-deploy-demo.com:81", referrer: "http://django-deploy-demo.com:81/admin/login/?next=/admin/"
+2023/07/20 13:09:26 [error] 21#21: *9 open() "/home/app/web/staticfiles/admin/js/theme.js" failed (2: No such file or directory), client: 172.19.0.1, server: django-deploy-demo.com, request: "GET /static/admin/js/theme.js HTTP/1.1", host: "django-deploy-demo.com:81", referrer: "http://django-deploy-demo.com:81/admin/login/?next=/admin/"
+2023/07/20 13:09:26 [error] 21#21: *10 open() "/home/app/web/staticfiles/admin/css/responsive.css" failed (2: No such file or directory), client: 172.19.0.1, server: django-deploy-demo.com, request: "GET /static/admin/css/responsive.css HTTP/1.1", host: "django-deploy-demo.com:81", referrer: "http://django-deploy-demo.com:81/admin/login/?next=/admin/"
+2023/07/20 13:09:26 [error] 22#22: *4 open() "/home/app/web/staticfiles/admin/js/nav_sidebar.js" failed (2: No such file or directory), client: 172.19.0.1, server: django-deploy-demo.com, request: "GET /static/admin/js/nav_sidebar.js HTTP/1.1", host: "django-deploy-demo.com:81", referrer: "http://django-deploy-demo.com:81/admin/login/?next=/admin/"
+2023/07/20 13:09:26 [error] 20#20: *11 open() "/home/app/web/staticfiles/admin/css/login.css" failed (2: No such file or directory), client: 172.19.0.1, server: django-deploy-demo.com, request: "GET /static/admin/css/login.css HTTP/1.1", host: "django-deploy-demo.com:81", referrer: "http://django-deploy-demo.com:81/admin/login/?next=/admin/"
+2023/07/20 13:10:37 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2023/07/20 13:10:37 [notice] 20#20: gracefully shutting down
+2023/07/20 13:10:37 [notice] 22#22: gracefully shutting down
+2023/07/20 13:10:37 [notice] 23#23: gracefully shutting down
+2023/07/20 13:10:37 [notice] 21#21: gracefully shutting down
+2023/07/20 13:10:37 [notice] 20#20: exiting
+2023/07/20 13:10:37 [notice] 22#22: exiting
+2023/07/20 13:10:37 [notice] 23#23: exiting
+2023/07/20 13:10:37 [notice] 20#20: exit
+2023/07/20 13:10:37 [notice] 22#22: exit
+2023/07/20 13:10:37 [notice] 23#23: exit
+2023/07/20 13:10:37 [notice] 1#1: signal 17 (SIGCHLD) received from 22
+2023/07/20 13:10:37 [notice] 1#1: worker process 22 exited with code 0
+2023/07/20 13:10:37 [notice] 1#1: signal 29 (SIGIO) received
+2023/07/20 13:10:37 [notice] 1#1: signal 17 (SIGCHLD) received from 20
+2023/07/20 13:10:37 [notice] 1#1: worker process 20 exited with code 0
+2023/07/20 13:10:37 [notice] 1#1: signal 29 (SIGIO) received
+2023/07/20 13:10:37 [notice] 1#1: signal 17 (SIGCHLD) received from 23
+2023/07/20 13:10:37 [notice] 1#1: worker process 23 exited with code 0
+2023/07/20 13:10:37 [notice] 1#1: signal 29 (SIGIO) received
+2023/07/20 13:10:42 [notice] 21#21: exiting
+2023/07/20 13:10:42 [notice] 21#21: exit
+2023/07/20 13:10:42 [notice] 1#1: signal 17 (SIGCHLD) received from 21
+2023/07/20 13:10:42 [notice] 1#1: worker process 21 exited with code 0
+2023/07/20 13:10:42 [notice] 1#1: exit
+2023/07/20 13:14:17 [notice] 1#1: using the "epoll" event method
+2023/07/20 13:14:17 [notice] 1#1: nginx/1.25.1
+2023/07/20 13:14:17 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2023/07/20 13:14:17 [notice] 1#1: OS: Linux 5.15.90.1-microsoft-standard-WSL2
+2023/07/20 13:14:17 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/07/20 13:14:17 [notice] 1#1: start worker processes
+2023/07/20 13:14:17 [notice] 1#1: start worker process 20
+2023/07/20 13:14:17 [notice] 1#1: start worker process 21
+2023/07/20 13:14:17 [notice] 1#1: start worker process 22
+2023/07/20 13:14:17 [notice] 1#1: start worker process 23
+2023/07/20 13:14:28 [error] 20#20: *1 open() "/home/app/web/staticfiles/global.css" failed (2: No such file or directory), client: 172.19.0.1, server: django-deploy-demo.com, request: "GET /static/global.css HTTP/1.1", host: "django-deploy-demo.com:81", referrer: "http://django-deploy-demo.com:81/"
+2023/07/20 13:14:36 [error] 20#20: *1 open() "/home/app/web/staticfiles/global.css" failed (2: No such file or directory), client: 172.19.0.1, server: django-deploy-demo.com, request: "GET /static/global.css HTTP/1.1", host: "django-deploy-demo.com:81", referrer: "http://django-deploy-demo.com:81/"
