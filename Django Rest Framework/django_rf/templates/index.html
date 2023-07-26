@@ -1,0 +1,30 @@
+<h1>Index page</h1>
+
+<script>
+    window.URLS = {
+        authors: '{% url "api_list_authors" %}'
+    }
+</script>
+<div id="authors">
+    Loading...
+</div>
+
+<script>
+    async function reloadAuthors() {
+        const response = await fetch(window.URLS.authors);
+        const {results} = await response.json();
+
+        const ul = document.createElement('ol');
+
+        for(const author of results) {
+            const listItem = document.createElement('li');
+            listItem.innerText = `${author.first_name} ${author.last_name}`
+            ul.appendChild(listItem)
+        }
+        const authorsRoot = document.getElementById('authors');
+
+        authorsRoot.innerHTML = '';
+        authorsRoot.appendChild(ul);
+    }
+    reloadAuthors()
+</script>
